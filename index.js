@@ -15,7 +15,7 @@ interface.on('line', function(line) {
         console.log('Remek!');
         left = Math.floor(Math.random() * 100);
         right = Math.floor(Math.random() * 100);
-    } else {
+    } else if (line != '') {
         lives -= 1;
     }
     if (lives > 0) {
