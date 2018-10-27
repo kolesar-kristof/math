@@ -13,10 +13,11 @@ interface.prompt();
 interface.on('line', function(line) {
     if (line == left+right) {
         console.log('Remek!');
-        success = true;
-        interface.close();
+        left = Math.floor(Math.random() * 100);
+        right = Math.floor(Math.random() * 100);
+    } else {
+        lives -= 1;
     }
-    lives -= 1;
     if (lives > 0) {
         interface.setPrompt(lives + ' életed van. ' + left + '+' + right + '=');
         interface.prompt();
