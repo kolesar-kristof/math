@@ -1,6 +1,6 @@
 var lives = 5;
 var success = false;
-
+var points = 0;
 var left = Math.floor(Math.random() * 100);
 var right = Math.floor(Math.random() * 100);
 
@@ -12,7 +12,7 @@ interface.prompt();
 
 interface.on('line', function(line) {
     if (line == left+right) {
-        console.log('Remek!');
+        console.log('Remek! ' + ++points + ' pontod van.');
         left = Math.floor(Math.random() * 100);
         right = Math.floor(Math.random() * 100);
     } else if (line != '') {
